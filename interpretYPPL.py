@@ -5,7 +5,7 @@ parser.add_argument("-f", "--file", help="Interprets the given file.")
 parser.add_argument("-l", "--length", help="Set the length of the variable strip.", type=int)
 info = parser.parse_args()
 
-fileName = "truthmachine.yppl"
+fileName = info.file
 if info.length == None:
     cellLength = 100
 else:
