@@ -44,9 +44,9 @@ while not programEnded:
         if command == "LOOKATTHECARDINTHEUPPERLEFTCORNER":
             cellPos -= 1
         if command == "GOTOTHEDESCRIPTION":
-            print(chr(cells[cellPos]))
+            print(chr(cells[cellPos]), end="")
         if command == "GOTOTHEDESCRIPTIONN":
-            print(str(cells[cellPos]))
+            print(str(cells[cellPos]), end="")
         if command == "THX4WATCHING":
             programEnded = True
             break
