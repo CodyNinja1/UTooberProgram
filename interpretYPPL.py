@@ -36,7 +36,7 @@ while not programEnded:
             continue 
 
         command = line[0]
-        if command != "GOTOTHEDESCRIPTION" and command != "GOTOTHEDESCRIPTIONN" and command != "COMMENTDOWNBELOWN" and command != "COMMENTDOWNBELOW" and command != "LOOKATTHECARDINTHEUPPERRIGHTCORNER" and command != "LOOKATTHECARDINTHEUPPERLEFTCORNER" and command != "THX4WATCHING":
+        if command != "GOTOTHEDESCRIPTION" and command != "GOTOTHEDESCRIPTIONN" and command != "COMMENTDOWNBELOWN" and command != "COMMENTDOWNBELOW" and command != "LOOKATTHECARDINTHEUPPERRIGHTCORNER" and command != "LOOKATTHECARDINTHEUPPERLEFTCORNER" and command != "THX4WATCHING" and command != "EDITORNOTE":
             args = int(line[1])
 
         if command == "LOOKATTHECARDINTHEUPPERRIGHTCORNER":
@@ -62,6 +62,8 @@ while not programEnded:
             cells[cellPos] *= int(args)
         if command == "SUBTRACTLIKEALOT":
             cells[cellPos] /= int(args)
+        if command == "EDITORNOTE":
+            continue
         if command == "JUMPTOIFYOUGOT>0":
             if cells[cellPos] > 0:
                 weJumping = True
