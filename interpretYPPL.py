@@ -5,7 +5,7 @@ parser.add_argument("-f", "--file", help="Interprets the given file.")
 parser.add_argument("-l", "--length", help="Set the length of the variable strip.", type=int)
 info = parser.parse_args()
 
-fileName = info.file
+fileName = "test.yppl"
 if info.length == None:
     cellLength = 100
 else:
@@ -30,10 +30,11 @@ while not programEnded:
         weJumping = False
     
     for lineCount in range(len(cutLines)):
-        if cutLines[lineCount] != "" or cutLines[lineCount] != "\n":
-            line = str(cutLines[lineCount]).split()
+        Fline = cutLines[lineCount]
+        if Fline == "" or Fline == "\n":
+            continue
         else:
-            continue 
+            line = str(cutLines[lineCount]).split() 
 
         command = line[0]
         if command != "GOTOTHEDESCRIPTION" and command != "GOTOTHEDESCRIPTIONN" and command != "COMMENTDOWNBELOWN" and command != "COMMENTDOWNBELOW" and command != "LOOKATTHECARDINTHEUPPERRIGHTCORNER" and command != "LOOKATTHECARDINTHEUPPERLEFTCORNER" and command != "THX4WATCHING" and command != "EDITORNOTE":
